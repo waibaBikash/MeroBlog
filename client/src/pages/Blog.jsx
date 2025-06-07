@@ -4,6 +4,7 @@ import { assets, blog_data, comments_data } from '../assets/assets';
 import Navbar from '../components/Navbar';
 import Moment from 'moment'
 import Footer from '../components/Footer';
+import Loader from '../components/Loader';
 
 const Blog = () => {
 
@@ -118,7 +119,7 @@ const Blog = () => {
       </div>
       <Footer/>
     </div>
-  ) : <div>Loading...</div>
+  ) : <Loader />
 }
 
 export default Blog
