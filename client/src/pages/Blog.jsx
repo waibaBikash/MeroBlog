@@ -3,6 +3,7 @@ import {useParams} from 'react-router-dom'
 import { assets, blog_data, comments_data } from '../assets/assets';
 import Navbar from '../components/Navbar';
 import Moment from 'moment'
+import Footer from '../components/Footer';
 
 const Blog = () => {
 
@@ -78,7 +79,16 @@ const Blog = () => {
                <button className='bg-primary text-white rounded p-2 px-8 hover:scale-102 transition-all cursor-pointer' type='submit'>Submit</button>
              </form>
            </div>
+             <div className='my-24 max-w-3xl mx-auto'>
+                <p>Share this article on social media</p>
+                 <div className='flex'>
+                   <img src={assets.facebook_icon} alt="" width={50} />
+                   <img src={assets.twitter_icon} alt="" width={50} />
+                   <img src={assets.googleplus_icon} alt="" width={50} />
+                 </div>
+             </div>
       </div>
+      <Footer/>
     </div>
   ) : <div>Loading...</div>
 }
