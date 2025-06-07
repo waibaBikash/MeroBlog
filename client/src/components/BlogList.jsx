@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import { blog_data, blogCategories } from '../assets/assets'
-import { motion } from "motion/react"
+import { useState } from 'react';
+import { blog_data, blogCategories } from '../assets/assets';
+import { motion } from "motion/react";
 import BlogCard from './BlogCard';
 
 
@@ -13,7 +13,8 @@ const BlogList = () => {
         {
           blogCategories.map((item)=> (
             <div key={item} className='relative'>
-               <button onClick={()=> setMenu(item)} className={`cursor-pointer text-gray-500 ${menu === item && 'text-white px-4 pt-0.5'}`}>
+               <button onClick={()=> setMenu(item)}
+                className={`cursor-pointer text-gray-500 ${menu === item && 'text-white px-4 pt-0.5'}`}>
                  {item}
                  {
                   menu === item && (<motion.div layoutId='underline'
@@ -35,4 +36,4 @@ const BlogList = () => {
   )
 }
 
-export default BlogList
+export default BlogList;
