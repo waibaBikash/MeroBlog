@@ -10,11 +10,20 @@ const BlogTableItem = ({blog, fetchBlogs, index}) => {
        <td className='px-2 py-4'>{title}</td>
        <td className='px-2 py-4 max-sm:hidden'>{BlogDate.toDateString()}</td>
        <td className='px-2 py-4 max-sm:hidden'>
-        <p className={`${blog.isPublished ? 'bg-green-800' : 'text-orange-700'}`}>{blog.isPublished ? 'Published' : 'Unpublished'}</p>
+        <p 
+         className={`${blog.isPublished ? 'bg-green-800' : 'text-orange-700'}`}>
+        {blog.isPublished ? 'Published' : 'Unpublished'}
+        </p>
        </td>
        <td className='px-2 py-4 flex text-sm gap-3'>
-         <button className='border px-2 py-0.5 rounded cursor-pointer'>{blog.isPublished ? 'Unpublish' : 'Publish'}</button>
-          <img src={assets.cross_icon} alt=""  className='w-8 hover:scale-110 transition-all cursor-pointer'/>
+         <button 
+           className='border px-2 py-0.5 rounded cursor-pointer'>
+            {blog.isPublished ? 'Unpublish' : 'Publish'}
+          </button>
+          <img 
+          src={assets.cross_icon} alt=""
+            className='w-8 hover:scale-110 transition-all cursor-pointer'
+            />
        </td>
     </tr>
   )
