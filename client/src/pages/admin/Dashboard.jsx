@@ -8,7 +8,7 @@ const Dashboard = () => {
     blogs: 0,
     comments: 0,
     drafts: 0,
-    recentBlog: []
+    recentBlogs: []
   })
 
   const fetchDashboard = async() =>{
@@ -70,7 +70,7 @@ const Dashboard = () => {
                    </thead>
                     <tbody>
                        {
-                        dashboardData.recentBlog.map((blog, index)=>{
+                        dashboardData.recentBlogs.map((blog, index)=>{
                           return <BlogTableItem 
                           key={blog._id} fetchBlogs={fetchDashboard}
                           index={index + 1}
