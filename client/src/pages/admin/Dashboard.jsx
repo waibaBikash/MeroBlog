@@ -71,7 +71,7 @@ const Dashboard = () => {
                     <tbody>
                        {
                         dashboardData.recentBlogs.map((blog, index)=>{
-                          return <BlogTableItem 
+                          return < BlogTableItem
                           key={blog._id} fetchBlogs={fetchDashboard}
                           index={index + 1}
                            />
