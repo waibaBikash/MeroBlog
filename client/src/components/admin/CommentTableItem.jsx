@@ -20,12 +20,14 @@ const CommentTableItem = ({comment, fetchComments}) => {
        <td>
          <div className='inline-flex items-center gap-4'>
             {!comment.isApproved ?
-            <img src={assets.tick_icon} alt="" className='w-5 hover:scale-110 transition-all cursor-pointer' /> : <p>Approved</p> }
-            <img src={assets.bin_icon} alt="" className='w-5 hover:scale-110 transition-all cursor-pointer' />
+            <img src={assets.tick_icon} alt="" 
+            className='w-5 hover:scale-110 transition-all cursor-pointer' /> : <p>Approved</p> }
+            <img src={assets.bin_icon} alt="" 
+            className='w-5 hover:scale-110 transition-all cursor-pointer' />
          </div>
        </td>
     </tr>
   )
 }
 
-export default CommentTableItem
+export default CommentTableItem;
