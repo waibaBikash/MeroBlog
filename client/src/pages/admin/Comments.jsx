@@ -43,7 +43,9 @@ const Comments = () => {
                   if(filter === 'Approved') 
                     return comment.isApproved === true;
                    return comment.isApproved === false;
-                }).map((comment, index) => <CommentTableItem key={comment._id} comment={comment} index={index + 1} fetchComments={fetchComments} />)}
+                }).map((comment, index) => <CommentTableItem 
+                key={comment._id} comment={comment} 
+                index={index + 1} fetchComments={fetchComments} />)}
               </tbody>
            </table>
         </div>
@@ -51,4 +53,4 @@ const Comments = () => {
   )
 }
 
-export default Comments
+export default Comments;
