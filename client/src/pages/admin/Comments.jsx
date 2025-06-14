@@ -1,11 +1,13 @@
-import React, { use, useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react';
 import { comments_data } from '../../assets/assets';
 import CommentTableItem from '../../components/admin/CommentTableItem';
 
 const Comments = () => {
 
-  const [comments, setComments] = useState([]);
-  const [filter, setFilter] = useState('Not Approved');
+  const [comments, 
+    setComments] = useState([]);
+  const [filter, 
+    setFilter] = useState('Not Approved');
 
   const fetchComments = async () => {
     setComments(comments_data);
