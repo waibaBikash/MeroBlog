@@ -31,7 +31,10 @@ const ListBlog = () => {
                     <tbody>
                        {
                         blogs.map((blog, index) => {
-                           return <BlogTableItem key={blog._id} blog={blog} fetchBlogs={fetchBlogs} index={index + 1} />
+                           return <BlogTableItem
+                            key={blog._id} blog={blog} 
+                            fetchBlogs={fetchBlogs} 
+                            index={index + 1} />
                        })}
                     </tbody>
                 </table>
@@ -41,4 +44,4 @@ const ListBlog = () => {
   )
 }
 
-export default ListBlog
+export default ListBlog;
