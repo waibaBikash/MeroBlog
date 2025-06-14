@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { assets, dashboard_data } from '../../assets/assets';
 import BlogTableItem from '../../components/admin/BlogTableItem';
 
+
 const Dashboard = () => {
 
   const [dashboardData, 
@@ -72,13 +73,9 @@ const Dashboard = () => {
                    </thead>
                     <tbody>
                        {
-                        dashboardData.recentBlogs.map((blog, index)=>{
-                          return < BlogTableItem
-                          key={blog._id} fetchBlogs={fetchDashboard}
-                          index={index + 1}
-                           />
-                        })
-                       }
+                        dashboardData.recentBlogs.map((blog, index) => {
+                           return <BlogTableItem key={blog._id} blog={blog} fetchBlogs={fetchDashboard} index={index + 1} />
+                       })}
                     </tbody>
                 </table>
              </div>
