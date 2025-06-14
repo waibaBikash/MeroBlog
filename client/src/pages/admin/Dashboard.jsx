@@ -60,7 +60,7 @@ const Dashboard = () => {
              <img src={assets.dashboard_icon_4} alt="" />
              <p>Latest Blogs</p>
            </div>
-             <div className='relative max-w-4xl overflow-auto shadow rounded-lg'>
+             <div className='relative max-w-4xl overflow-x-auto shadow rounded-lg scrollbar-hide bg-white'> 
                 <table className='w-full text-sm text-gray-500'>
                    <thead className='text-xs text-gray-600 text-left uppercase'>
                        <tr>
