@@ -2,6 +2,7 @@ import React from 'react'
 import { assets } from '../../assets/assets';
 
 const BlogTableItem = ({blog, fetchBlogs, index}) => {
+  if(!blog) return null;
   const {title, createdAt} = blog;
   const BlogDate = new Date(createdAt)
   return (
