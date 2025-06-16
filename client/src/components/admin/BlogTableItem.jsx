@@ -1,7 +1,8 @@
 import React from 'react'
-import { assets } from '../../assets/assets'
+import { assets } from '../../assets/assets';
 
-const BlogTableItem = ({blog, fetchBlogs, index}) => {
+const BlogTableItem = ({blog, 
+  fetchBlogs, index}) => {
 
   const { title, createdAt } = blog;
   
@@ -25,7 +26,8 @@ const BlogTableItem = ({blog, fetchBlogs, index}) => {
               {blog.isPublished ? 'Unpublished' : 'Published'}
               </button>
              <img src={assets.cross_icon} alt="" 
-             className='w-8 hover:scale-110 transition-all cursor-pointer' />
+             className='w-8 hover:scale-110 transition-all cursor-pointer' 
+             />
         </td>
     </tr>
   )
