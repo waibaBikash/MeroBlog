@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { use, useEffect, useRef, useState } from 'react'
 import { assets } from '../../assets/assets'
+import Quill from 'quill';
 
 const AddBlog = () => {
+
+  const editorRef = useRef(null);
+  const quillRef = useRef(null);
 
   const [image, setImage] = useState(false);
   const [title, setTitle] = useState('');
@@ -17,6 +21,13 @@ const AddBlog = () => {
     e.preventDefault();
 
   }
+
+  useEffect(() => {
+//  Initiate Quill only once
+    if(!quillRef.current && editorRef.current){
+      quillRef.current = new Quill(editorRef.current, {theme: 'snow'})
+    }
+  },[])
 
   return (
     <form  onSubmit={onSubmmitHandler} className='flex-1 bg-blue-50/50 text-gray-600 h-full overflow-scroll'>
@@ -35,6 +46,7 @@ const AddBlog = () => {
 
          <p className='mt-4'>Blog Description</p>
            <div className='max-w-lg h-74 pb-16 sm:pb-10 pt-2 relative'>
+            <div ref={editorRef}></div>
               <button onClick={generateContent} type='button' className='absolute bottom-1 right-2 ml-2 text-xs text-white bg-black/70 px-4 py-1.5 rounded hover:underline cursor-pointer'>Generate with AI</button>
            </div>
        </div>
