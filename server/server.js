@@ -2,7 +2,7 @@ import express from 'express';
 import 'dotenv/config';
 import cors from 'cors';
 
-const app = exrpess();
+const app = express();
 
 // Middleware
 app.use(cors());
