@@ -8,14 +8,17 @@ const Footer = () => {
           <div>
              <img src={assets.logo} alt="logo" className='w-32 sm:w-44' />
              <p className='max-w-[410px] mt-6'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-              Fuga voluptatem veniam earum eveniet quia dolorem fugiat rerum numquam ex aliquam?</p>
+              Fuga voluptatem veniam earum eveniet quia dolorem fugiat rerum numquam ex aliquam?
+              </p>
           </div>
 
             <div className='flex flex-wrap justify-between w-full md:w-[45%] gap-5'>
                 {
                   footer_data.map((section, index)=>(
                     <div key={index}>
-                      <h3 className='font-semibold text-base text-gray-900 md:mb-5 mb-2'>{section.title}</h3>
+                      <h3 
+                       className='font-semibold text-base text-gray-900 md:mb-5 mb-2'>{section.title}
+                       </h3>
                         <ul className='text-sm space-y-1'>
                            {section.links.map((link, i)=>(
                              <li key={i}>
